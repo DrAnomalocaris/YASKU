@@ -169,6 +169,12 @@ def main():
     print(f"Starting search for topics: {', '.join(config.get('topics', []))}")
     print(f"Max search results set to {max_search}")
 
+    if not config.get('discordWebhook') or config.get('discordWebhook') == 'REPLACE WITH YOUR DISCORD WEBHOOK':
+        print("\nNo Discord webhook URL set in your .yasku config file.")
+        print("Default files have been created. Please set your webhook URL and run 'yasku' again.")
+        print("To configure, edit your .yasku file or run 'yasku_config'.")
+        return
+
     for topic in config.get('topics', []):
         print(f"Topic: {topic}", end=' ')
         start_time = time.time()

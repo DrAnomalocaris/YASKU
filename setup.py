@@ -4,8 +4,7 @@ setup(
     name="yasku",
     version="0.1.0",
     description="Yet Another Science Keppy Upy - Keep up to date with science fields via PubMed and Discord.",
-    author="Your Name",
-    author_email="your@email.com",
+    author="Albert Lahat",
     packages=find_packages(),
     install_requires=[
         "requests",
@@ -14,7 +13,8 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'yasku = yasku.main:main'
+            'yasku = yasku.main:main',
+            'yasku_config = yasku.config:main'
         ]
     },
     python_requires='>=3.7',

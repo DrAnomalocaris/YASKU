@@ -1,3 +1,4 @@
 [console_scripts]
 yasku = yasku.main:main
+yasku_config = yasku.config:main
 
